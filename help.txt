@@ -10,3 +10,7 @@ source venv/bin/activate
 export FLASK_APP=microblog.py
 
 flask run
+
+
+pip install flask
+pip install flask_wtf
