@@ -10,11 +10,15 @@ source venv/bin/activate
 export FLASK_APP=microblog.py
 
 flask run
-<<<<<<< HEAD
-
+flask shell
 
 pip install flask
 pip install flask_wtf
-=======
+pip install flask_sqlalchemy
+pip install flask-migrate
+pip install flask-login
+
 flask db init
->>>>>>> 9c0cecd4ddda30ff3c01012261e02d9224e9c555
+flask db migrate -m "users table"  - generate migration scripts
+flask db upgrade   - apply migration scripts
+flask db downgrade   - undo the last migration
